@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px dashed black; */
+}
+
+body{
+    background: linear-gradient(27deg, rgba(131,58,180,1) 0%, rgba(241,0,0,1) 20%, rgba(103,6,181,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav{
+    background-color: #fff;
+    width: 335px;
+    position: relative;
+}
+
+#navbar{
+    z-index: 20;
+    background-color: white;
+    width: 335px;
+}
+
+#navbar .main-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px 0 30px;
+    height: 80px;
+    width: 304px;
+    border-bottom: 1px solid #F9F9F9;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2D2D2D;
+    cursor: pointer;
+
+}
+
+#navbar .main-menu span{
+    width: 213px;
+}
+
+#navbar .main-menu .main-menu-icon{
+    visibility: hidden;
+    margin-right: 20px;
+}
+
+#navbar .main-menu .second-menu .second-menu-element img{
+    visibility: hidden;
+    margin-right: 20px;
+}
+
+#navbar .main-menu .second-menu{
+    position: absolute;
+    left: 335px;
+    top: 0;
+    width: 335px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    animation-name: menuSlide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+#navbar .main-menu .second-menu .second-menu-element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 315px;
+    border-bottom: 1px solid #F9F9F9;
+    margin-left: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#navbar .main-menu:hover{
+    color: #F58634;
+}
+
+#navbar .main-menu:hover .main-menu-icon{
+    visibility: visible;
+}
+
+#navbar .main-menu:hover .second-menu{
+    display: block;
+    cursor: default;
+}
+
+#navbar .main-menu .second-menu .second-menu-element:hover{
+    background: rgba(245, 134, 52, 0.1);
+    color: #F58634;
+}
+
+#navbar .main-menu .second-menu .second-menu-element:hover img{
+    visibility: visible;
+}
+
+.main-menu .second-menu .second-menu-element .third-menu{
+    position: absolute;
+    top: 0px;
+    left: 335px;
+    width: 640px;
+    min-height: 100vh;
+    height: 100%;
+    background: #F9F9F9;
+    display: none;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 130%;
+    text-align: center;
+    color: #2D2D2D;
+    animation-name: menuSlide2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.main-menu .second-menu .second-menu-element.second-menu-element:hover .third-menu{
+    display: block;
+}
+
+.second-menu .third-menu .third-menu-flexdiv{
+    width: 640px;
+    padding: 19px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #F9F9F9;
+    cursor: default;
+}
+
+.second-menu .third-menu .third-menu-flexdiv .third-menu-element{
+    width: 135px;
+    height: 135px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.second-menu .third-menu .third-menu-flexdiv .third-menu-element:hover{
+    background-color: rgba(245, 134, 52, 0.1);
+}
+
+
+
+
+
+
+@keyframes menuSlide {
+    0%{
+        left: 0;
+        z-index: -1;
+    }
+
+    99%{
+        z-index: -1;
+    }
+
+    100%{
+        left: 100%;
+        z-index: 1;
+    }
+}
+
+
+@keyframes menuSlide2 {
+    0%{
+        left: -90%;
+        z-index: -1;
+    }
+
+    99%{
+        z-index: -1;
+    }
+
+    100%{
+        left: 100%;
+        z-index: 1;
+    }
+}
+
