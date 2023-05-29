@@ -1,7 +1,7 @@
 
-# Product-page
+# eCommerce Side Menu
 
-ProductPage: A stylish HTML and CSS-based product page...
+eCommerce Side Menu: A user-friendly solution for eCommerce sites. Enhance navigation and user experience with this customizable side menu. Showcase product categories, expandable secondary/tertiary menus, and seamless integration with eCommerce platforms.
 
 
 
